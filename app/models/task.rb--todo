@@ -1,0 +1,5 @@
+class Task < ApplicationRecord
+class Article < ApplicationRecord
+  scope :completed,, -> { where(completed: true) }
+  scope :incomplete, -> {where(completed: false) }
+end
